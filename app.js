@@ -18,31 +18,34 @@ let inpBox = document.querySelector("#reset");
     }else{
        
         let myCount = parseFloat(myProg) + parseFloat(myMath) + parseFloat(myComp) + parseFloat(myEng);
-   let myTotal = ((myCount*100)/450).toFixed(2);
+   let myTotal = ((myCount*100)/400).toFixed(2);
         if(myTotal<=100 && myTotal >=80){
-            myPara.innerHTML = `Total Marks is 450. Your Obtain Marks is ${myCount}. Your Percentage is ${myTotal}. Your Grade is A One.`;
+            myPara.innerHTML = `Total Marks is 400. Your Obtain Marks is ${myCount}. Your Percentage is ${myTotal}. Your Grade is A One.`;
             myPara.style.color = "#fff";
             inpBox.reset();
         }else if(myTotal>=70 && myTotal<80){
-            myPara.innerHTML = `Total Marks is 450. Your Obtain Marks is ${myCount}. Your Percentage is ${myTotal}. Your Grade is A.`;
+            myPara.innerHTML = `Total Marks is 400. Your Obtain Marks is ${myCount}. Your Percentage is ${myTotal}. Your Grade is A.`;
             myPara.style.color = "#fff"; 
         inpBox.reset();   }
             else if(myTotal>=60 && myTotal<70){
-            myPara.innerHTML = `Total Marks is 450. Your Obtain Marks is ${myCount}. Your Percentage is ${myTotal}. Your Grade is B.`;
+            myPara.innerHTML = `Total Marks is 400. Your Obtain Marks is ${myCount}. Your Percentage is ${myTotal}. Your Grade is B.`;
             myPara.style.color = "#fff";
         inpBox.reset();    }
             else if(myTotal>=50 && myTotal<60){
-            myPara.innerHTML = `Total Marks is 450. Your Obtain Marks is ${myCount}. Your Percentage is ${myTotal}. Your Grade is C.`;
+            myPara.innerHTML = `Total Marks is 400. Your Obtain Marks is ${myCount}. Your Percentage is ${myTotal}. Your Grade is C.`;
             myPara.style.color = "#fff";
         inpBox.reset();    }
             else if(myTotal>=40 && myTotal<50){
-            myPara.innerHTML = `Total Marks is 450. Your Obtain Marks is ${myCount}. Your Percentage is ${myTotal}. Your Grade is D.`;
+            myPara.innerHTML = `Total Marks is 400. Your Obtain Marks is ${myCount}. Your Percentage is ${myTotal}. Your Grade is D.`;
             myPara.style.color = "#fff";
         inpBox.reset();    }
-            else{
-            myPara.innerHTML = `Total Marks is 450. Your Obtain Marks is ${myCount}. Your Percentage is ${myTotal}. Your Grade is E.`;
+            else if(myTotal<40){
+            myPara.innerHTML = `Total Marks is 400. Your Obtain Marks is ${myCount}. Your Percentage is ${myTotal}. Your Grade is E.`;
             myPara.style.color = "crimson";
             inpBox.reset();
+        }else{
+            myPara.innerHTML = `Please Enter a Correct Number`;
+            myPara.style.color = `crimson`;
         }
         // myProg = "";
         // myMath = "";
